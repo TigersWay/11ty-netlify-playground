@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- {{ pkg.name }} v{{ pkg.version }} | {% if pkg.private %}All rights reserved{% else %}{{ pkg.license }}{% endif %} | {{ pkg.author | safe }} -->
+<html lang="{{ locale }}" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.locales[locale].title }}</title>
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="{{ site.url }}{{ featured if featured else site.featured }}">
+  <meta property="og:url" content="{{ site.url }}">
+
+  <link rel="icon" href="/static/images/icon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon-precomposed" href="/static/images/icon-256x256.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/css/styles.min.css">
+</head>
+<body>
+
+<header>
+  <h1>{% if title %}{{ title }} | {% endif %}{{ site.locales[locale].title }}</h1>
+  <p>{{ site.locales[locale].tagline }}</p>
+  <img src="{{ featured if featured else site.featured }}" alt="">
+</header>
+
+{% block body -%}{%- endblock %}
+
+<footer>
+</footer>
+
+</body>
+</html>

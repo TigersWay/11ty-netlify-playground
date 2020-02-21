@@ -1,0 +1,11 @@
+{
+  "defaultLocale": "en",
+  "locales": {
+    "en": {
+      "title": "11ty & netlify playground"
+    },
+    "fr": {
+      "title": "Terrain d'essai pour 11ty & netlify"
+    }
+  }
+}
