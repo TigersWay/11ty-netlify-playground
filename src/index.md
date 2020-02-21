@@ -4,5 +4,7 @@ locale: en
 layout: simple.njk
 ---
 ## Hello World!
+
+![Blue Eyes](/static/images/blue-eyes.jpg "Blue eyes")
+
 {% debug page %}
-{% debug collections.all, 2 %}

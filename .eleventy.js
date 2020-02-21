@@ -3,7 +3,7 @@ const glob = require('fast-glob');
 module.exports = function (eleventyConfig) {
 
   // Filters
-  glob.sync('{.11ty,.netlify}/filters/*.js').forEach(file => {
+  glob.sync('{_11ty,_netlify}/filters/*.js').forEach(file => {
     let filters = require('./' + file);
     Object.keys(filters).forEach(name => {
       eleventyConfig.addFilter(name, filters[name])
@@ -11,7 +11,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // Shortcodes
-  glob.sync('{.11ty,.netlify}/shortcodes/*.js').forEach(file => {
+  glob.sync('{_11ty,_netlify}/shortcodes/*.js').forEach(file => {
     let shortcodes = require('./' + file);
     Object.keys(shortcodes).forEach(name => {
       eleventyConfig.addShortcode(name, shortcodes[name])

@@ -17,3 +17,6 @@ logs
 # Generated output
 dist
 public
+
+# Local Netlify folder
+.netlify

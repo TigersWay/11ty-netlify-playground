@@ -28,7 +28,7 @@ const buildHTML = (cb) =>  {
     cb(error);
   });
 }
-const watchHTML = () => {return watch(['src/**/*', '.eleventy.js', '{.11ty,.netlify}/{filters,shortcodes}/*.js'], buildHTML)}
+const watchHTML = () => {return watch(['src/**/*', '.eleventy.js', '{_11ty,_netlify}/{filters,shortcodes}/*.js'], buildHTML)}
 
 const serve = () => {
   return require('browser-sync').init({
