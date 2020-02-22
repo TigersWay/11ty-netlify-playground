@@ -2,14 +2,14 @@
   "name": "11ty-netlify-playground",
   "description": "Exploring the Static Generator 'Eleventy / 11ty'",
   "keywords": [
-    "Eleventy",
+    "eleventy",
     "11ty",
-    "Netlify",
-    "Playground",
+    "netlify",
+    "playground",
     "gulp",
     "less"
   ],
-  "version": "0.7.0",
+  "version": "0.7.1",
   "license": "MIT",
   "author": "Ben Michaud <ben@tigersway.net>",
   "repository": {
@@ -20,9 +20,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy": "^0.11.0-beta.1",
     "del": "^5.1.0",
-    "fast-glob": "^3.2.1",
+    "fast-glob": "^3.2.2",
     "gulp": "^4.0.2",
     "gulp-load-plugins": "^2.0.2",
     "has-flag": "^4.0.0"
