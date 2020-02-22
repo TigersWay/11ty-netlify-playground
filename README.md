@@ -8,6 +8,7 @@ Exploring the Static Generator 'Eleventy / 11ty'
   + [\#935 Top level directory data file](https://github.com/11ty/eleventy/issues/935)
   + Simple/Tag collections
   + Netlify slow: added favicon and empty CSS
+  + First pick on Branches & Leaves (Navigation)
 
 
 - **0.7.0** 2020-02-20

@@ -67,6 +67,7 @@ const serve = () => {
     });
 }
 
+exports.clean = clean;
 
 exports.build = series(
   clean,

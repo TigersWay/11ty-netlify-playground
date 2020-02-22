@@ -1,0 +1,8 @@
+---
+title: "Honduras"
+---
+### HONDURAS
+
+1,300 to 1,800 masl | 5,020,000 bags mostly washed
+
+The Honduran coffee program, which was once substantial in the commercial market, was rocked by destruction from Hurricane Mitch and subsequent storms in the late 1990s. It has also traditionally lacked the infrastructure of some of its South American neighbors, so even though the country has prime climate, elevation, and soil quality, it has struggled to keep up with countries like Guatemala and Colombia. However, in the past 10 years, more and more small holders and exporters have entered the specialty coffee market. In 2016, more than 95 small producers collectively cultivated 94 percent of the country's coffee, and today, it is the largest producer and exporter of coffee in Central America. Typical Honduran coffees are mild and medium bodied, and the best tend to be highly complex and juicy. Sometimes Honduran coffee gets knocked for its brief shelf life, which may be related to how rainy the country can be, as that makes drying the coffee difficult. Out of Honduras's 18 departments, 15 grow coffee, although the highest-quality coffee is typically grown in the Marcala region in the southwestern part of the country. Over the past few years, demand for Honduran specialty coffee has increased, and both producers and the Instituto Hondureño del Café have responded in kind-the former by dedicating more land to specialty crops, and the latter by mapping and naming six growing regions based on the high elevation, shade-grown coffee found in each: Copán, Opalaca, Montecillos (which is marketed under Marcala), Comayagua, Agalta, and El Paraiso. Each region's coffee has defining flavor characteristics, ranging from chocolate to tropical fruit to citrus.

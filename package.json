@@ -17,7 +17,10 @@
     "url": "git+https://github.com/TigersWay/11ty-netlify-playground.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "live": "gulp live",
+    "debug": "set DEBUG=Eleventy* & eleventy --dryrun"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.0-beta.1",
@@ -27,7 +30,8 @@
     "gulp-clean-css": "^4.2.0",
     "gulp-load-plugins": "^2.0.2",
     "gulp-rename": "^2.0.0",
-    "has-flag": "^4.0.0"
+    "has-flag": "^4.0.0",
+    "multimatch": "^4.0.0"
   },
   "browserslist": [
     "defaults"

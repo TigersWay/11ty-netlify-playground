@@ -1,0 +1,8 @@
+---
+title: "Colombia"
+---
+### COLOMBIA
+
+800 to 1,900 masl | 12,281,000 bags | mostly washed
+
+Colombia, which invented the idea of single-origin coffee before specialty coffee existed, competes with Vietnam for the title of second-most productive coffee country in the world, although it ranks first in terms of arabica (97 percent of Vietnam's coffee crop is robusta, and the country is only beginning to develop specialty coffees). Colombian beans generally do not hold as much cachet as, say, Kenyan or Guatemalan beans, but with three mountain ranges and one of the most biodiverse landscapes in the world, Colombia is capable of producing high-quality coffees. As of 2016, nearly 40 percent of all Colombian coffee exports were specialty grade. Unlike those in many other countries, most Colombian producers have processing mills on their property, which helps them control quality; at the same time, they traditionally sort, grade, and bag their beans with other lots without the benefit of cupping, which can diminish overall quality and make it impossible to establish the origin. However, there is a growing trend in Colombia toward cupping and bagging single-farm coffee, which is crucial for the specialty market. If you want to increase your odds of tasting a great Colombian coffee, make sure to choose a bag that identifies the region or farm. Some of the more recognized regions, Nariño, Cauca, and Southern Huila, are in the southwestern part of the country, although the north, including the prominent regions of Antioquia and Santander, produce coffee, too. Colombian coffee has a reputation for being consistent and well balanced. It typically has a medium body with moderate acidity and notes ranging from tropical fruit to chocolate.

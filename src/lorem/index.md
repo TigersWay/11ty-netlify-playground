@@ -1,12 +1,10 @@
 ---
+title: "Lorem(s)"
 footnotes:
 ---
-
-All pages tagged **lorem**:
+### Leaves
 <ul>
-{% for item in collections.lorem %}
-<li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
-{% endfor %}
+{% for item in collections.all | leaves(page) %}<li><a href="{{ item.url }}">{{ item.data.title }}</a></li>{% endfor %}
 </ul>
 
 [Home](/)
