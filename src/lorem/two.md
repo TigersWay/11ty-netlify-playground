@@ -1,6 +1,7 @@
 ---
-title: "Two"
+title: "Star Wars"
 tags:
+  - lorem
   - star-wars
 ---
 # Look, I can take you as far as Anchorhead. You can get a transport there to Mos Eisley or wherever you're going.

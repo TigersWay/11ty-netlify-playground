@@ -1,3 +1,4 @@
 {
-  "layout": "simple.njk"
+  "layout": "lorem.njk",
+  "footnotes": "Made with <a href=\"http://fillerama.io/\">fillerama</a>"
 }

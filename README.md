@@ -6,6 +6,7 @@ Exploring the Static Generator 'Eleventy / 11ty'
 - **0.7.1** 2020-02-22
   + LFS
   + [\#935 Top level directory data file](https://github.com/11ty/eleventy/issues/935)
+  + Simple/Tag collections
 
 
 - **0.7.0** 2020-02-20

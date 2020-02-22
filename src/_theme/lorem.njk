@@ -1,0 +1,19 @@
+<!doctype html>
+<!-- {{ pkg.name }} v{{ pkg.version }} | {% if pkg.private %}All rights reserved{% else %}{{ pkg.license }}{% endif %} | {{ pkg.author | safe }} -->
+<html lang="{{ locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.locales[locale].title }}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/css/styles.min.css">
+</head>
+<body>
+
+{% block body -%}{{ content | safe }}{%- endblock %}
+
+{% if footnotes %}<p>-&nbsp;<i>{{ footnotes | safe }}</i>&nbsp;-</p>{% endif %}
+
+</body>
+</html>

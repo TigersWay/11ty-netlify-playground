@@ -1,6 +1,7 @@
 ---
-title: "One"
+title: "Monty Python and the Holy Grail"
 tags:
+  - lorem
   - monthy-python
 ---
 # Shut up! Will you shut up?!
