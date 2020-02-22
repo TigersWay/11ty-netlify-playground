@@ -19,10 +19,10 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    // templateFormats: ['md', 'njk', 'html', '11ty.js'],
-    // markdownTemplateEngine: 'njk',
-    // htmlTemplateEngine: 'njk',
-    // dataTemplateEngine: 'njk',
+    templateFormats: ['html', 'md', 'njk', '11ty.js'],
+    markdownTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
+    dataTemplateEngine: 'njk',
 
     dir: {
       input: './src',

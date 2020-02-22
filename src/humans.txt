@@ -1,0 +1,7 @@
+# humanstxt.org/
+
+/* TEAM */
+  Architect & Web designer: Ben Michaud (https://tigersway.net/)
+  From: Bangkok, Thailand
+
+/* THANKS */

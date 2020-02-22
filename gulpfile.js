@@ -15,6 +15,14 @@ const clean = async () => {
   return await require('del')([destPath]);
 }
 
+const copyMisc = () => {
+  return src([
+      'src/favicon.ico',
+      'src/humans.txt'
+    ])
+    .pipe(dest(destPath));
+}
+
 const copyStatic = () => {
   return src(['static/**'])
     .pipe(dest(destPath + '/static'));
@@ -30,6 +38,24 @@ const buildHTML = (cb) =>  {
 }
 const watchHTML = () => {return watch(['src/**/*', '.eleventy.js', '{_11ty,_netlify}/{filters,shortcodes}/*.js'], buildHTML)}
 
+const buildCSS = () => {
+  return src('src/css/styles.css')
+    .pipe($.cleanCss({
+      format: {
+        breakWith: 'unix',
+        breaks: {afterComment: true, afterRuleEnds: (destPath === 'dev')}
+      },
+      level: {
+        1: {specialComments: '1'},
+        2: {restructureRules: true}
+      }
+    }))
+    .pipe($.rename({suffix: '.min'}))
+    .pipe(dest(destPath + '/css'));
+}
+const watchCSS = () => {return watch('src/css/**/*.css', buildCSS)}
+
+
 const serve = () => {
   return require('browser-sync').init({
       server: destPath,
@@ -44,10 +70,10 @@ const serve = () => {
 
 exports.build = series(
   clean,
-  parallel(copyStatic, buildHTML)
+  parallel(copyMisc, copyStatic, buildHTML, buildCSS)
 );
 
 exports.live = series(
-  parallel(buildHTML),
-  parallel(watchHTML, serve)
+  parallel(buildHTML, buildCSS),
+  parallel(watchHTML, watchCSS, serve)
 );
