@@ -3,15 +3,30 @@ Exploring the Static Generator 'Eleventy / 11ty'
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/87fcccb7-3de5-4fde-815e-9e402010f1e7/deploy-status)](https://app.netlify.com/sites/11ty-netlify-playground/deploys)
 
+
+
+- **0.7.2** 2020-02-26
+  + [x] Markdown engine & plugins
+  + [x] Branches & Leaves: Sort
+  + [x] Paired shortcodes
+  + [x] [\#481 Computed data](https://github.com/11ty/eleventy/issues/481)
+  + [x] Tag list & pages
+  + [ ] Netlify CDN & Transform
+  + [ ] Gallery
+  + [ ] Google Maps
+  + [ ] Nunjucks "extends"
+  + [ ] CSS
+
+
 - **0.7.1** 2020-02-22
-  + LFS
-  + [\#935 Top level directory data file](https://github.com/11ty/eleventy/issues/935)
-  + Simple/Tag collections
-  + Netlify slow: added favicon and empty CSS
-  + First pick on Branches & Leaves (Navigation)
+  + [x] LFS
+  + [x] [\#935 Top level directory data file](https://github.com/11ty/eleventy/issues/935)
+  + [x] Simple/Tag collections
+  + [x] Netlify slow: added favicon and empty CSS
+  + [x] First pick on Branches & Leaves (Navigation)
 
 
 - **0.7.0** 2020-02-20
-  + Project re-start
-  + organize filters & shortcodes
-  + debug shortcode (util.inspect)
+  + [x] Project re-start
+  + [x] organize filters & shortcodes
+  + [x] debug shortcode (util.inspect)

@@ -36,7 +36,7 @@ const buildHTML = (cb) =>  {
     cb(error);
   });
 }
-const watchHTML = () => {return watch(['src/**/*', '.eleventy.js', '{_11ty,_netlify}/{filters,shortcodes}/*.js'], buildHTML)}
+const watchHTML = () => {return watch(['src/**/*', '.eleventy.js', '{_11ty,_netlify}/**/*.js'], buildHTML)}
 
 const buildCSS = () => {
   return src('src/css/styles.css')

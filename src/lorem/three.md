@@ -1,7 +1,6 @@
 ---
 title: "Doctor Who"
 tags:
-  - lorem
   - doctor-who
 ---
 # You've swallowed a planet!

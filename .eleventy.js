@@ -18,6 +18,30 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  // Paired shortcodes
+  glob.sync('{_11ty,_netlify}/pairedShortcodes/*.js').forEach(file => {
+    let paired = require('./' + file);
+    Object.keys(paired).forEach(name => {
+      eleventyConfig.addPairedShortcode(name, paired[name])
+    });
+  });
+
+  // Markdown engine &  plugins
+  eleventyConfig.setLibrary(
+    'md',
+    require('markdown-it')({
+      html: true,
+      linkify: true,
+      typographer: true
+    })
+    .use(require('markdown-it-attrs'), {
+      allowedAttributes: ['id', 'class']
+    })
+    .use(require('markdown-it-emoji/light'))
+  );
+
+  eleventyConfig.setDataDeepMerge(true);
+
   return {
     templateFormats: ['html', 'md', 'njk', '11ty.js'],
     markdownTemplateEngine: 'njk',

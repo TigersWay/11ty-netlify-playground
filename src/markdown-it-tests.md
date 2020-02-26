@@ -16,11 +16,11 @@ test.. test... test..... test?..... test!....
 
 ## Tables
 
-| Fruits | Prices |
-| :-: | --:|
-| orange | $1.20 |
-| apple | $0.98 |
-| strawberry | $16.00 |
+| A | Fruits | Prices |
+| --- | :-: | --:|
+| 1| orange | $1.20 |
+| 2| apple | $0.98 |
+| 3| strawberry | $16.00 |
 
 ## Class, Id ...
 

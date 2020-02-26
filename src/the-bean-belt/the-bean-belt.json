@@ -1,6 +1,4 @@
 {
-  "layout": "simple.njk",
-  "tags": [
-    "coffee"
-  ]
+  "tags": ["coffee"],
+  "layout": "simple.njk"
 }
