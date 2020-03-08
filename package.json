@@ -9,7 +9,7 @@
     "gulp",
     "less"
   ],
-  "version": "0.7.2",
+  "version": "0.8.0",
   "license": "MIT",
   "author": "Ben Michaud <ben@tigersway.net>",
   "repository": {
@@ -19,7 +19,7 @@
   "scripts": {
     "build": "gulp build",
     "clean": "gulp clean",
-    "live": "gulp live",
+    "live": "gulp live --quiet",
     "debug": "set DEBUG=Eleventy* & eleventy --dryrun"
   },
   "dependencies": {
@@ -28,17 +28,24 @@
     "fast-glob": "^3.2.2",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.2.0",
+    "gulp-hb": "^8.0.0",
     "gulp-load-plugins": "^2.0.2",
+    "gulp-postcss": "^8.0.0",
     "gulp-rename": "^2.0.0",
     "has-flag": "^4.0.0",
     "markdown-it-attrs": "^3.0.2",
     "markdown-it-emoji": "^1.4.0",
-    "multimatch": "^4.0.0"
+    "moment": "^2.24.0",
+    "multimatch": "^4.0.0",
+    "postcss-custom-properties": "^9.1.1",
+    "postcss-nesting": "^7.0.1",
+    "tailwindcss": "^1.2.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "sharp": "^0.25.1"
   },
   "browserslist": [
     "defaults"
-  ],
-  "devDependencies": {
-    "browser-sync": "^2.26.7"
-  }
+  ]
 }

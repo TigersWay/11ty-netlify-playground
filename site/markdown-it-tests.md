@@ -1,5 +1,6 @@
 ---
 title: markdown-it (tests)
+layout: simple.njk
 ---
 
 ## Typographic replacements
@@ -24,7 +25,7 @@ test.. test... test..... test?..... test!....
 
 ## Class, Id ...
 
-Written with red {.red}
+Written with red {.text-red-600}
 
 ## Emojis
 

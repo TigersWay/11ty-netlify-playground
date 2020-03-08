@@ -49,7 +49,7 @@ module.exports = function (eleventyConfig) {
     dataTemplateEngine: 'njk',
 
     dir: {
-      input: './src',
+      input: './site',
       layouts: '_theme',
       includes: '_theme/includes',
       data: '_data',

@@ -11,9 +11,11 @@
 </head>
 <body>
 
-{% block body -%}{{ content | safe }}{%- endblock %}
-
-{% if footnotes %}<p>-&nbsp;<i>{{ footnotes | safe }}</i>&nbsp;-</p>{% endif %}
+  <section class="band">
+    <div class="container">
+      {% block body -%}{{ content | safe }}{%- endblock %}
+    </div>
+    {% if footnotes %}<div class="container">-&nbsp;<i>{{ footnotes | safe }}</i>&nbsp;-</div>{% endif %}
 
 </body>
 </html>

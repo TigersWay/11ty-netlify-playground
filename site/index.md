@@ -1,6 +1,5 @@
 ---
 title: "Welcome"
-locale: en
 layout: simple.njk
 ---
 ## Hello World!

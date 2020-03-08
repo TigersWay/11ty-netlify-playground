@@ -15,8 +15,10 @@ logs
 .env*
 
 # Generated output
-dist
-public
+dist/
+public/*
+!public/static
+
 
 # Local Netlify folder
 .netlify

@@ -5,6 +5,9 @@ tags:
 ---
 # I don't understand the question, and I won't respond to it.
 
+![Pakse Transport](/static/images/theocourant/Pakse-Transport.jpg)
+
+
 Did you enjoy your meal, Mom? You drank it fast enough. It's called 'taking advantage.' It's what gets you ahead in life. There's so many poorly chosen words in that sentence. Across from where?
 
 That's what it said on 'Ask Jeeves. ' I don't criticize you! And if you're worried about criticism, sometimes a diet is the best defense. __We just call it a sausage.__ *I'm half machine.* I'm a monster.
