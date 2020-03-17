@@ -17,15 +17,15 @@
 
   <nav id="header" class="bg-white fixed w-full z-10 top-0 shadow">
 
-    <div class="container w-full mx-auto px-2 flex flex-wrap items-center py-2 lg:pb-0">
+    <div class="w-full container mx-auto flex flex-wrap items-center mt-0 pt-3 pb-3 md:pb-0">
 
-      <div class="w-4/5">
-        <a class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold xpl-4" href="#">
+      <div class="w-1/2 pl-2 md:pl-0">
+        <a class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="#">
           <i class="fa fa-graduation-cap fa-lg text-teal-600 pr-3"></i>{{ site.locales[locale].title }}
         </a>
       </div>
 
-      <div class="w-1/5">
+      <div class="w-1/2 pr-0">
         <div class="flex relative inline-block float-right">
           <div class="block lg:hidden pr-4">
             <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-teal-500 appearance-none focus:outline-none">
@@ -37,18 +37,18 @@
 
       <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white z-20" id="nav-content">
         <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0">
-          <li class="mx-4 my-2 md:my-0">
-            <a href="#" class="block py-1 md:py-3 px-1 align-middle text-teal-600 no-underline hover:text-gray-900 border-b-2 border-teal-600 hover:border-purple-600">
+          <li class="mr-6 my-2 md:my-0">
+            <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-teal-600 no-underline hover:text-gray-900 border-b-2 border-teal-600 hover:border-purple-600">
               <i class="fa fa-home fa-fw mr-2 text-teal-600"></i>&nbsp;<span class="pb-1 md:pb-0 text-sm">Home</span>
             </a>
           </li>
-          <li class="mx-4 my-2 md:my-0">
-            <a href="#" class="block py-1 md:py-3 px-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-purple-500">
+          <li class="mr-6 my-2 md:my-0">
+            <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-purple-500">
               <i class="fa fa-envelope fa-fw mr-2"></i>&nbsp;<span class="pb-1 md:pb-0 text-sm">Messages</span>
             </a>
           </li>
-          <li class="mx-4 my-2 md:my-0">
-            <a href="#" class="block py-1 md:py-3 px-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-purple-500">
+          <li class="mr-6 my-2 md:my-0">
+            <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-purple-500">
               <i class="fa fa-key-modern fa-fw mr-2"></i>&nbsp;<span class="pb-1 md:pb-0 text-sm">Secrets</span>
             </a>
             </li>
@@ -57,24 +57,14 @@
 
        </div>
 
-  </nav>
+   </nav>
 
-  <div class="container w-full mx-auto px-2 pt-16 lg:pt-24">
-    <div class="w-full mb-16 text-gray-800 leading-normal">
+  <div class="container w-full mx-auto pt-20">
+    <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
 
-      <div class="flex flex-wrap flex-grow -mx-2 mt-2">
-        <div class="w-full p-2">
-          <div class="bg-white border rounded shadow">
-            <div class="classic border-b p-3">
-{% block body -%}{%- endblock %}
-            </div>
-          </div>
-        </div>
-      </div>
-      {# <div class="flex flex-wrap -mx-2">
+      <div class="flex flex-wrap">
 
-
-        <div class="w-full lg:w-1/3 p-2">
+        <div class="w-full p-3">
           <div class="bg-white border rounded shadow p-2">
             <div class="flex flex-row items-center">
               <div class="flex-shrink pr-4">
@@ -88,7 +78,21 @@
           </div>
         </div>
 
-        <div class="w-full lg:w-1/3 p-2">
+        <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+          <div class="bg-white border rounded shadow p-2">
+            <div class="flex flex-row items-center">
+              <div class="flex-shrink pr-4">
+                <div class="rounded p-3 bg-green-600"><i class="fa fa-university fa-2x fa-fw fa-inverse"></i></div>
+              </div>
+              <div class="flex-1 text-right md:text-center">
+                <h5 class="font-bold uppercase text-gray-500">Total Revenue</h5>
+                <h3 class="font-bold text-3xl">$3249&nbsp;<span class="text-green-500"><i class="fa fa-caret-up"></i></span></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 xl:w-1/3 p-3">
           <div class="bg-white border rounded shadow p-2">
             <div class="flex flex-row items-center">
               <div class="flex-shrink pr-4">
@@ -102,13 +106,13 @@
           </div>
         </div>
 
-      </div> #}
+      </div>
 
-      {# <hr class="border-b-2 border-gray-400 my-8"> #}
+      <hr class="border-b-2 border-gray-400 my-8 mx-4">
 
-      {# <div class="flex flex-wrap flex-grow -mx-2 mt-2">
+      <div class="flex flex-row flex-wrap flex-grow mt-2">
 
-        <div class="w-full md:w-1/2 xl:w-1/3 p-2">
+        <div class="w-full md:w-1/2 xl:w-1/3 p-3">
           <div class="bg-white border rounded shadow">
             <div class="border-b p-3">
               <h5 class="font-bold uppercase text-gray-600">Template</h5>
@@ -118,7 +122,7 @@
           </div>
         </div>
 
-        <div class="w-full md:w-1/2 p-2">
+        <div class="w-full md:w-1/2 p-3">
           <div class="bg-white border rounded shadow">
             <div class="border-b p-3">
               <h5 class="font-bold uppercase text-gray-600">Graph</h5>
@@ -128,7 +132,7 @@
           </div>
         </div>
 
-        <div class="w-full p-2">
+        <div class="w-full p-3">
           <div class="bg-white border rounded shadow">
             <div class="border-b p-3">
               <h5 class="font-bold uppercase text-gray-600">Table</h5>
@@ -139,11 +143,13 @@
           </div>
         </div>
 
-      </div> #}
+      </div>
 
     </div>
   </div>
 
+
+{% block body -%}{%- endblock %}
 
   <footer class="bg-white border-t border-gray-400 shadow">
     <div class="container max-w-md mx-auto flex py-8">

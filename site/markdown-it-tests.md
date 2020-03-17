@@ -3,6 +3,8 @@ title: markdown-it (tests)
 layout: simple.njk
 ---
 
+## ![Hello](/static/images/blue-eyes.jpg)
+
 ## Typographic replacements
 
 Enable typographer option to see result.
@@ -17,11 +19,11 @@ test.. test... test..... test?..... test!....
 
 ## Tables
 
-| A | Fruits | Prices |
-| --- | :-: | --:|
-| 1| orange | $1.20 |
-| 2| apple | $0.98 |
-| 3| strawberry | $16.00 |
+| A   | Fruits     | Prices |
+| --- |:----------:| ------:|
+| 1   | orange     | $1.20  |
+| 2   | apple      | $0.98  |
+| 3   | strawberry | $16.00 |
 
 ## Class, Id ...
 

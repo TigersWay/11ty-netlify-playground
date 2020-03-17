@@ -2,17 +2,16 @@
 title: "Welcome"
 layout: simple.njk
 ---
+
 ## Hello World!
 
 ### tagSet
-<ul>
-{% for tag in collections.all | tagList %}<li><h4>{{ tag }}</h4><ul>
+
+<ul class="list-disc ml-4">
+{% for tag in collections.all | tagList %}<li><h4>{{ tag }}</h4><ul class="list-disc ml-4">
 {% for item in collections[ tag ] %}<li><a href="{{ item.url }}">{{ item.data.title }}</a></li>{% endfor %}
 </ul></li>{% endfor %}
 </ul>
-
-
-
 
 {% simpleCell 'Classic Lorem Ipsum' %}
 
@@ -25,20 +24,22 @@ Nam sit amet mi egestas, sodales velit quis, placerat nulla. Interdum et malesua
 {% endsimpleCell %}
 
 ### Every pages
+
 <ul>
 {% for item in collections.all %}<li><a href="{{ item.url }}">{{ item.data.title }}</a></li>{% endfor %}
 </ul>
 
 ### Branches
+
 <ul>
 {% for item in collections.all | branches(page) %}<li><a href="{{ item.url }}">{{ item.data.title }}</a></li>{% endfor %}
 </ul>
 
 ### Leaves
+
 <ul>
 {% for item in collections.all | leaves(page) %}<li><a href="{{ item.url }}">{{ item.data.title }}</a></li>{% endfor %}
 </ul>
-
 
 ![Blue Eyes (crop)](/static/images/blue-eyes.jpg?nf_resize=smartcrop&w=300&h=300)
 

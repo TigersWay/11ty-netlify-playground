@@ -1,41 +1,16 @@
 /*! {{ pkg.name }} v{{ pkg.version }} | {{#if pkg.private}}All rights reserved{{else}}{{ pkg.license }}{{/if}} | {{{ pkg.author }}} */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
 @tailwind base;
 
 @tailwind components;
 
-body {
-  font-family: 'Open Sans', sans-serif;
-}
-.band {
-  @apply w-full py-4
-}
-h1,h2,h3,h4 {@apply font-bold}
-h1 {@apply text-4xl}
-h2 {@apply text-3xl}
-h3 {@apply text-2xl}
-p {@apply mb-2}
-.p-blue {
-  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
-}
-.p-blue:hover {
-  @apply bg-blue-700;
+.classic {
+  & h1, & h2, & h3, & h4, & h5 {@apply font-bold}
+  & h1 {@apply text-2xl}
+  & h2 {@apply text-xl}
+  & h3 {@apply text-lg}
+  & a {@apply text-teal-600 underline}
+  & a:hover {@apply text-purple-600}
 }
 
-body > header {
-  @apply bg-orange-300 text-white font-bold py-2 px-4;
-  & h1 {
-    @apply text-green-700;
-  }
-}
 @tailwind utilities;
-
-.container {
-  @apply mx-auto bg-yellow-400 px-2
-}
-
-.p-blue {
-  //background-color: theme('colors.blue.500');
-}

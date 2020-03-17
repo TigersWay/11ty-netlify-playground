@@ -11,4 +11,4 @@ module.exports = {
     return moment(date).utc().format();
   }
 
-}
+};
