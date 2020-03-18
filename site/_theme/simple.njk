@@ -1,3 +1,8 @@
 {% extends "standard.njk" %}
+{% import "card.njk" as card %}
 
-{% block body -%}{{ content | safe }}{%- endblock %}
+{% block body -%}
+{% call card.cell('') %}
+{{ content | safe }}
+{% endcall %}
+{%- endblock %}

@@ -1,5 +1,8 @@
 ---
 title: "Welcome"
+menu:
+  title: Home
+  icon: home
 layout: simple.njk
 ---
 
@@ -8,8 +11,8 @@ layout: simple.njk
 ### tagSet
 
 <ul class="list-disc ml-4">
-{% for tag in collections.all | tagList %}<li><h4>{{ tag }}</h4><ul class="list-disc ml-4">
-{% for item in collections[ tag ] %}<li><a href="{{ item.url }}">{{ item.data.title }}</a></li>{% endfor %}
+{% for tag in collections.all | tagList | sort %}<li><h4>{{ tag }}</h4><ul class="list-disc ml-4">
+{% for item in collections[ tag ] | xsort('data.title') %}<li><a href="{{ item.url }}">{{ item.data.title }}</a></li>{% endfor %}
 </ul></li>{% endfor %}
 </ul>
 

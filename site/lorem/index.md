@@ -1,5 +1,7 @@
 ---
 title: "Lorem(s)"
+menu:
+  icon: quote-right
 footnotes:
 ---
 **{{ flag }}**

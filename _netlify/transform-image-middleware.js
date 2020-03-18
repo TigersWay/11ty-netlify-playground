@@ -33,7 +33,7 @@ const transformImage = (req, res, next) => {
 
       res.statusCode = 304;
       res.setHeader('Last-Modified', req.headers['if-modified-since']);
-      next();
+      return;
 
     } else {
 
@@ -47,7 +47,7 @@ const transformImage = (req, res, next) => {
       res.setHeader('content-type', mimeTypes[path.extname(filename)]);
 
       fs.createReadStream(filename)
-        .on('error', (e) => {
+        .on('error', (err) => {
           console.error(err);
           return;
         })
@@ -56,7 +56,7 @@ const transformImage = (req, res, next) => {
 
     }
   } else next();
-}
+};
 
 
 module.exports = (root) => {
@@ -65,4 +65,4 @@ module.exports = (root) => {
 
   return transformImage;
 
-}
+};

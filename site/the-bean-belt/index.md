@@ -1,5 +1,7 @@
 ---
-title: The Bean Belt
+title: "The Bean Belt"
+menu:
+  icon: coffee
 ---
 ### Leaves
 <ul>

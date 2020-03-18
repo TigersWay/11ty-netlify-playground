@@ -6,7 +6,6 @@ const $ = require('gulp-load-plugins')();
 // Variables & parameters
 
 const hasFlag = require('has-flag');
-const isProduction = hasFlag('production');
 const isQuiet = hasFlag('quiet');
 
 const pkg = require('./package.json');
@@ -16,25 +15,20 @@ const destPath = 'public';
 
 const clean = async () => {
   return await require('del')([destPath +'/*', '!' + destPath + '/static']);
-}
+};
 
 const copyMisc = () => {
-  return src([
-      'site/favicon.ico',
-      'site/humans.txt'
-    ])
+  return src(['site/favicon.ico', 'site/humans.txt'])
     .pipe(dest(destPath));
-}
+};
 
-const buildHTML = (cb) =>  {
-  var exec = require('child_process').exec;
-  exec(`npx eleventy ${(isProduction || isQuiet) ? ' --quiet' : ''}`, (error, stdout, stderr) => {
+const buildHTML = () =>  {
+  return require('child_process').exec(`npx eleventy ${isQuiet ? ' --quiet' : ''}`, (error, stdout, stderr) => {
     process.stdout.write(stdout);
     if (error) console.error(stderr);
-    cb(error);
   });
-}
-const watchHTML = () => {return watch(['site/**/*', '.eleventy.js', '{_11ty,_netlify}/**/*.js'], buildHTML)}
+};
+const watchHTML = () => {return watch(['site/**/*', '.eleventy.js', '{_11ty,_netlify}/**/*.js'], buildHTML);};
 
 const buildCSS = () => {
   return src('site/_theme/*.css')
@@ -57,14 +51,15 @@ const buildCSS = () => {
     }))
     .pipe($.rename({suffix: '.min'}))
     .pipe(dest(destPath + '/css'));
-}
-const watchCSS = () => {return watch('site/_theme/*.css', buildCSS)}
+};
+const watchCSS = () => {return watch('site/_theme/*.css', buildCSS);};
 
 
 const serve = () => {
   const transformImage = require('./_netlify/transform-image-middleware.js')(destPath + '/static/images');
 
-  return require('browser-sync').init({
+  return require('browser-sync')
+    .init({
       server: destPath,
       middleware: [{
         route: '/static/images',
@@ -76,7 +71,7 @@ const serve = () => {
       ],
       browser: ['C:/Program Files/Firefox Developer Edition/firefox.exe']
     });
-}
+};
 
 exports.clean = clean;
 

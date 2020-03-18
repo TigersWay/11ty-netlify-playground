@@ -37,6 +37,10 @@ module.exports = {
     return [...tagSet];
   },
 
+  one: (collection, url) => {
+    return collection.filter(item => url === item.url)[0];
+  },
+
   branches: (collection, page) => {
     let pathname = path.dirname(page.inputPath);
     return collection.filter(item => {
@@ -58,7 +62,7 @@ module.exports = {
     });
   },
 
-  sort: (collection, key, order = 'asc') => {
+  xsort: (collection, key, order = 'asc') => {
     return collection.sort(compareValues(key, order));
   }
 
