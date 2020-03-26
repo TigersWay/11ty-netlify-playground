@@ -17,7 +17,7 @@ Exploring the Static Generator 'Eleventy / 11ty'
   - [Debug in HTML](_11ty/shortcodes/debug.js)
 
 ### CHANGELOG
-- **0.9.0** 2020-03-24 New iteration to "organize" content (Typed, Hierarchical, Modular, etc.)
+- **0.9.0** 2020-03-26 New iteration to "organize" content (Typed, Hierarchical, Modular, etc.)
   + [x] Debug in HTML
   + [x] TailwindCSS, TailwindUI, PostCSS
 
