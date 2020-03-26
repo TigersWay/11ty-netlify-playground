@@ -26,6 +26,11 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  // Collections
+  eleventyConfig.addCollection('navigation', collection => {
+    return require('./_11ty/filters/navigation.js').buildNavigation(collection.getAllSorted());
+  });
+
   // Markdown engine &  plugins
   eleventyConfig.setLibrary(
     'md',

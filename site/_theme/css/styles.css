@@ -1,0 +1,26 @@
+/*! {{ pkg.name }} v{{ pkg.version }} | {{#if pkg.private}}All rights reserved{{else}}{{ pkg.license }}{{/if}} | {{{ pkg.author }}} */
+
+/* purgecss start ignore */
+@tailwind base;
+
+.Eleventy {
+  @nest pre& {@apply border-l-2 border-primary-600 text-xs bg-primary-100 m-2 p-1 pl-4 whitespace-pre-wrap}
+}
+
+h1, h2, h3, h4, p, pre {@apply mb-3}
+h1, h2, h3, h4 {@apply font-bold}
+h1 {@apply text-2xl}
+h2 {@apply text-xl}
+h3 {@apply text-lg}
+
+a {
+  @apply text-primary-600 underline;
+  & > i[class*="fa"] {@apply pr-3}
+}
+
+code {@apply bg-gray-200}
+
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;

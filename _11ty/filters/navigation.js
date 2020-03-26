@@ -23,6 +23,41 @@ function compareValues(key, order = 'asc') {
   };
 }
 
+
+let cache = {};
+
+const buildNavigation = (collection) => {
+  collection.forEach((page, index) => {
+    cache[page.filePathStem] = {item: index, parent: null, branches: [], leaves: []};
+  });
+
+  Object.keys(cache).forEach(key => {
+    let parent = key;
+    if (parent.endsWith('/index')) {
+      parent = path.dirname(parent);
+      while (parent.length > 1) {
+        parent = path.dirname(parent);
+        if (cache.hasOwnProperty(parent + 'index')) {
+          cache[key].parent = cache[parent + 'index'].item;
+          cache[parent + 'index'].branches.push(cache[key].item);
+          break;
+        }
+      }
+    } else {
+      do {
+        parent = path.dirname(parent);
+        if (cache.hasOwnProperty(parent + '/index')) {
+          cache[key].parent = cache[parent + '/index'].item;
+          cache[parent + '/index'].leaves.push(cache[key].item);
+          break;
+        }
+      } while (parent.length > 1);
+    }
+  });
+
+  return cache;
+};
+
 module.exports = {
 
   tagList: (collection, excepts = ['all', 'nav', 'page', 'pages', 'post', 'posts']) => {
@@ -37,22 +72,30 @@ module.exports = {
     return [...tagSet];
   },
 
-  one: (collection, url) => {
-    return collection.filter(item => url === item.url)[0];
-  },
+  find: (collection, filePathStem) => collection[cache[filePathStem].item],
 
   branches: (collection, page) => {
-    let pathname = path.dirname(page.inputPath);
-    return collection.filter(item => {
-      return Boolean(multimatch(item.inputPath, pathname + '/*/index.*').length);
+    // let pathname = path.dirname(page.inputPath);
+    // return collection.filter(item => {
+    //   return Boolean(multimatch(item.inputPath, pathname + '/*/index.*').length);
+    // });
+    let branches = [];
+    cache[page.filePathStem].branches.forEach(index => {
+      branches.push(collection[index]);
     });
+    return branches;
   },
 
   leaves: (collection, page) => {
-    let pathname = path.dirname(page.inputPath);
-    return collection.filter(item => {
-      return Boolean(multimatch(item.inputPath, [pathname + '/*.*', '!' + pathname + '/index.*']).length);
+    // let pathname = path.dirname(page.inputPath);
+    // return collection.filter(item => {
+    //   return Boolean(multimatch(item.inputPath, [pathname + '/*.*', '!' + pathname + '/index.*']).length);
+    // });
+    let leaves = [];
+    cache[page.filePathStem].leaves.forEach(index => {
+      leaves.push(collection[index]);
     });
+    return leaves;
   },
 
   deepLeaves: (collection, page) => {
@@ -64,6 +107,8 @@ module.exports = {
 
   xsort: (collection, key, order = 'asc') => {
     return collection.sort(compareValues(key, order));
-  }
+  },
+
+  buildNavigation: buildNavigation
 
 };

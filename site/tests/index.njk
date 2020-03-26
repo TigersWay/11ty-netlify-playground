@@ -26,7 +26,8 @@ menu:
 {% endcall %}
 
 
-{% set home = collections.all | one('/') %}
+{% set home = collections.all | find('/index') %}
+
 
 {% call card.cell('md:w-1/2') %}
 <h2 class="font-bold text-xl">{{ home.data.title }}</h2>

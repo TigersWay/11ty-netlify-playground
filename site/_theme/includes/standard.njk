@@ -33,7 +33,7 @@
       </div>
       <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white z-20" id="nav-content">
         <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0">
-{% set home = collections.all | one('/') %}
+{% set home = collections.all | find('/index') %}
           <li class="mx-4 my-2 md:my-0">
             <a href="{{ home.url }}" class="block py-1 md:py-3 px-1 align-middle text-teal-600 no-underline hover:text-gray-900 border-b-2 border-teal-600 hover:border-purple-600">
               <i class="fa fa-{{ home.data.menu.icon }} fa-fw mr-2 text-teal-600"></i>&nbsp;<span class="pb-1 md:pb-0 text-sm">{{ home.data.menu.title or home.data.title }}</span>

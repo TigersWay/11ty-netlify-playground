@@ -2,7 +2,6 @@
 title: markdown-it (tests)
 layout: simple.njk
 ---
-
 ## ![Hello](/static/images/blue-eyes.jpg)
 
 ## Typographic replacements

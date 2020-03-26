@@ -1,0 +1,80 @@
+<!doctype html>
+<!-- {{ pkg.name }} v{{ pkg.version }} | {% if pkg.private %}All rights reserved{% else %}{{ pkg.license }}{% endif %} | {{ pkg.author | safe }} -->
+<html lang="{{ locale }}" class="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.locales[locale].title }}</title>
+
+  <link rel="icon" href="/static/images/icon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon-precomposed" href="/static/images/icon-256x256.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.2.1/dist/alpine.min.js"></script>
+</head>
+<body class="bg-white min-h-screen flex flex-col font-sans leading-normal tracking-normal">
+
+  <nav id="header" class="bg-white fixed w-full z-10 top-0 shadow">
+    <div class="container mx-auto flex flex-wrap items-center">
+
+      <div class="w-4/5 px-2 py-2">
+        <a  href="/" class="text-gray-900 text-xl no-underline font-bold">
+          <svg class="inline-block text-primary-600 fill-current w-6 h-6 align-text-bottom" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.432,15C14.387,9.893,12,8.547,12,6V3h0.5C12.776,3,13,2.776,13,2.5v-1C13,1.224,12.776,1,12.5,1h-5,C7.224,1,7,1.224,7,1.5v1C7,2.776,7.224,3,7.5,3H8v3c0,2.547-2.387,3.893-4.432,9C2.917,16.625,1.245,19,10,19,S17.083,16.625,16.432,15z M14.815,16.751C14.113,16.961,12.716,17.2,10,17.2s-4.113-0.239-4.815-0.449,c-0.249-0.074-0.346-0.363-0.258-0.628c0.22-0.67,0.635-1.828,1.411-3.121c1.896-3.159,3.863,0.497,5.5,0.497,s1.188-1.561,1.8240.497c0.774,1.294,1.191,2.451,1.411,3.121C15.161,16.388,15.064,16.676,14.815,16.751z"/>
+          </svg> {{ site.locales[locale].title }}
+        </a>
+      </div>
+
+      <div class="w-1/5 px-2">
+        <div class="float-right md:hidden">
+          <button id="nav-toggle" class="m-1 p-1 border rounded text-gray-800 border-gray-400 hover:text-primary-500 hover:border-primary-400 appearance-none focus:outline-none">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+
+      <div id="nav-content" class="flex-grow hidden md:block z-20">
+        <ul class="text-sm ml-4 md:ml-0 px-2 pb-4 md:pb-0 inline-block md:flex ">
+{% set home = collections.all | find('/index') %}
+          <li class="mr-6">
+            <a href="{{ home.url }}" class="block no-underline px-2 py-2 md:py-1 text-gray-900 hover:text-secondary-600 border-b-2 border-primary-600 hover:border-secondary-600">
+              <i class="fa fa-{{ home.data.menu.icon }} fa-fw mr-1"></i><span class="">{{ home.data.menu.title or home.data.title }}</span>
+            </a>
+          </li>
+{% for page in collections.all | branches(home) %}
+          <li class="mr-6">
+            <a href="{{ page.url }}" class="block no-underline px-2 py-2 md:py-1 text-gray-900 hover:text-secondary-600 border-b-2 border-primary-600 hover:border-secondary-600">
+              <i class="fa fa-{{ page.data.menu.icon }} fa-fw mr-1"></i><span class="">{{ page.data.menu.title or page.data.title }}</span>
+            </a>
+          </li>
+{% endfor %}
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="container w-full mx-auto px-2 pt-16 lg:pt-24">
+    <div class="w-full mb-16 text-gray-800 leading-normal">
+{%- block body %}
+{{ content | safe }}
+{%- endblock %}    </div>
+  </div>
+
+  <footer class="mt-auto bg-white border-t border-gray-400 shadow">
+    <div class="container mx-auto flex px-8 py-4">
+      <div class="flex-grow "><p class="text-gray-600 text-sm">{{ pkg.description }}</p></div>
+      <div class=""><a href="{{ pkg.homepage }}"><i class="fa fa-github"></i>{{ pkg.name }}</a></div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('nav-toggle').onclick = () => document.getElementById("nav-content").classList.toggle("hidden");</script>
+  <script src="/js/scripts.js"></script>
+</body>
+</html>
