@@ -1,0 +1,61 @@
+---
+title: "Welcome"
+layout: "standard.njk"
+menu:
+  title: Home
+  icon: home
+---
+{% import "flex.njk" as flex %}
+
+{%- block body %}
+{% call flex.region() %}
+{% call flex.box('md:w-1/3') %}
+
+<h3>tagSet</h3>
+<ul class="list-disc ml-4">
+{% for tag in collections.all | tagList %}
+  <li>
+    <h4>{{ tag | title }}</h4>
+    <ul class="list-disc ml-4">
+    {% for item in collections[ tag ] | sort('data.title') %}
+      <li>
+        <a href="{{ item.url | url }}">{{ item.data.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endcall %}
+{% call flex.box('md:w-1/3') %}
+
+<h3>Branches</h3>
+<ul>
+{% for item in collections.all | branches(page) %}<li><a href="{{ item.url | url }}">{{ item.data.title }}</a></li>{% endfor %}
+</ul>
+
+{% endcall %}
+{% call flex.box('md:w-1/3') %}
+
+<h3>Leaves</h3>
+<ul>
+{% for item in collections.all | leaves(page) %}<li><a href="{{ item.url | url }}">{{ item.data.title }}</a></li>{% endfor %}
+</ul>
+
+{% endcall %}
+{% call flex.box('md:w-1/3') %}
+
+<h3>Every pages</h3>
+<ul>
+{% for item in collections.all %}<li><a href="{{ item.url | url }}">{{ item.data.title }}</a></li>{% endfor %}
+</ul>
+
+{% endcall %}
+{% endcall %}
+{% call flex.region() %}
+{% call flex.box('md:w-1/2') %}
+Bye
+{% endcall %}
+{% endcall %}
+{%- endblock %}

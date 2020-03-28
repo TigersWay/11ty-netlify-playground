@@ -1,0 +1,18 @@
+{% extends "base.njk" %}
+
+{%- block body %}
+      <div class="w-full p-2">
+        <div class="bg-white border rounded shadow">
+          <article class="p-5">
+{{ content | safe -}}
+          </article>
+        </div>
+      </div>
+{%- if footnotes %}
+      <div class="w-full p-2">
+        <div class="bg-white border rounded shadow">
+          <div class="p-5">{{ footnotes | safe }}</div>
+        </div>
+      </div>
+{% endif %}
+{%- endblock %}

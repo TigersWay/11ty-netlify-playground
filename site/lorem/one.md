@@ -27,7 +27,7 @@ Bloody Peasant! She looks like one. Well, we did do the nose. Why? And the hat. 
 
 Well, Mercia's a temperate zone! Well, Mercia's a temperate zone! Well, Mercia's a temperate zone! And the hat. She's a witch! The Lady of the Lake, her arm clad in the purest shimmering samite, held aloft Excalibur from the bosom of the water, signifying by divine providence that I, Arthur, was to carry Excalibur. That is why I am your king.
 
-Bloody Peasant! Now, look here, my good man. Why? We want a shrubbery!! Burn her!
+> Bloody Peasant! Now, look here, my good man. Why? We want a shrubbery!! Burn her!
 
 …Are you suggesting that coconuts migrate? What a strange person. …Are you suggesting that coconuts migrate? Well, how'd you become king, then? Look, my liege! Ah, now we see the violence inherent in the system!
 

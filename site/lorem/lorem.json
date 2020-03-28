@@ -1,5 +1,5 @@
 {
   "tags": ["lorem"],
-  "layout": "simple.njk",
+  "layout": "article.njk",
   "footnotes": "Made with <a href=\"http://fillerama.io/\">fillerama</a>"
 }

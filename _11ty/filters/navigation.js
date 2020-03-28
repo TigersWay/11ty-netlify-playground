@@ -69,16 +69,12 @@ module.exports = {
           .forEach(item => tagSet.add(item));
       }
     });
-    return [...tagSet];
+    return [...tagSet].sort();
   },
 
   find: (collection, filePathStem) => collection[cache[filePathStem].item],
 
   branches: (collection, page) => {
-    // let pathname = path.dirname(page.inputPath);
-    // return collection.filter(item => {
-    //   return Boolean(multimatch(item.inputPath, pathname + '/*/index.*').length);
-    // });
     let branches = [];
     cache[page.filePathStem].branches.forEach(index => {
       branches.push(collection[index]);
@@ -87,10 +83,6 @@ module.exports = {
   },
 
   leaves: (collection, page) => {
-    // let pathname = path.dirname(page.inputPath);
-    // return collection.filter(item => {
-    //   return Boolean(multimatch(item.inputPath, [pathname + '/*.*', '!' + pathname + '/index.*']).length);
-    // });
     let leaves = [];
     cache[page.filePathStem].leaves.forEach(index => {
       leaves.push(collection[index]);
@@ -105,7 +97,7 @@ module.exports = {
     });
   },
 
-  xsort: (collection, key, order = 'asc') => {
+  sort: (collection, key, order = 'asc') => {
     return collection.sort(compareValues(key, order));
   },
 

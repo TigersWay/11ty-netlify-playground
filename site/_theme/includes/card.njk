@@ -1,9 +1,0 @@
-{% macro cell(class) %}
-        <div class="w-full {{ class }} p-2">
-          <div class="bg-white border rounded shadow">
-            <div class="p-5">
-{{ caller() | safe }}
-            </div>
-          </div>
-        </div>
-{% endmacro %}

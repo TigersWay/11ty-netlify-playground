@@ -3,11 +3,7 @@
 /* purgecss start ignore */
 @tailwind base;
 
-.Eleventy {
-  @nest pre& {@apply border-l-2 border-primary-600 text-xs bg-primary-100 m-2 p-1 pl-4 whitespace-pre-wrap}
-}
-
-h1, h2, h3, h4, p, pre {@apply mb-3}
+h1, h2, h3, h4, h5, h6, p, ol, ul {@apply mb-3}
 h1, h2, h3, h4 {@apply font-bold}
 h1 {@apply text-2xl}
 h2 {@apply text-xl}
@@ -19,6 +15,30 @@ a {
 }
 
 code {@apply bg-gray-200}
+
+.Eleventy {
+  @nest pre& {@apply border-l-2 border-primary-600 text-xs bg-primary-100 m-2 p-1 pl-4 whitespace-pre-wrap}
+}
+
+article {
+  & h1, & h2 {@apply mt-2}
+  & h1, & h2, & h3, & h4, & h5, & h6, & p, & ol, & ul, & blockquote {@apply mb-3}
+  & h1, & h2, & h3, & h4, & h5 {@apply font-bold}
+  & h1 {@apply text-2xl}
+  & h2 {@apply text-xl}
+  & h3 {@apply text-lg}
+  & h4 {}
+  & h5 {@apply text-sm italic}
+  & h6 {@apply text-xs italic}
+
+  & ol {@apply list-inside list-decimal pl-2 -mt-2}
+  & ul {@apply list-inside list-disc pl-2 -mt-2}
+
+  & blockquote {@apply ml-8 pl-4 border-l-4 border-primary-600 text-gray-500}
+  & blockquote > p:last-child {@apply mb-0}
+
+}
+
 
 @tailwind components;
 /* purgecss end ignore */

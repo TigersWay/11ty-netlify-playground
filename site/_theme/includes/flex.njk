@@ -1,0 +1,15 @@
+{% macro region() %}
+      <div class="flex flex-wrap">
+{{ caller() }}
+      </div>
+{% endmacro %}
+
+{% macro box(classList) %}
+        <div class="w-full {{ classList }} p-2">
+          <div class="bg-white border rounded shadow">
+            <div class="p-5">
+{{ caller() }}
+            </div>
+          </div>
+        </div>
+{% endmacro %}

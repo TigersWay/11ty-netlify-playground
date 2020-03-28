@@ -11,7 +11,7 @@ const hasFlag = require('has-flag');
 const isQuiet = hasFlag('quiet');
 
 const pkg = require('./package.json');
-const destPath = 'public';
+const destPath = (process.env.pathPrefix || 'public').replace(/^\/|\/$/g, '');
 
 // Tasks
 
@@ -25,7 +25,7 @@ const copyMisc = () => {
 };
 
 const buildHTML = (cb) =>  {
-  require('child_process').exec(`npx eleventy ${isQuiet ? ' --quiet' : ''}`, (error, stdout) => {
+  require('child_process').exec(`npx eleventy${isQuiet ? ' --quiet' : ''}${process.env.pathPrefix ? ' --pathprefix=' + process.env.pathPrefix : ''}`, (error, stdout) => {
     process.stdout.write(stdout);
     // if (error) console.error(stderr);
     cb(error);

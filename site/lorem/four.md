@@ -5,9 +5,6 @@ tags:
 ---
 # I don't understand the question, and I won't respond to it.
 
-![Pakse Transport](/static/images/theocourant/Pakse-Transport.jpg)
-
-
 Did you enjoy your meal, Mom? You drank it fast enough. It's called 'taking advantage.' It's what gets you ahead in life. There's so many poorly chosen words in that sentence. Across from where?
 
 That's what it said on 'Ask Jeeves. ' I don't criticize you! And if you're worried about criticism, sometimes a diet is the best defense. __We just call it a sausage.__ *I'm half machine.* I'm a monster.
@@ -42,7 +39,7 @@ I'm half machine. I'm a monster. Now, when you do this without getting punched i
 
 Really? Did nothing cancel? There's only one man I've ever called a coward, and that's Brian Doyle Murray. No, what I'm calling you is a television actor. Say goodbye to these, because it's the last time!
 
-There's only one man I've ever called a coward, and that's Brian Doyle Murray. No, what I'm calling you is a television actor. There's only one man I've ever called a coward, and that's Brian Doyle Murray. No, what I'm calling you is a television actor.
+There's only one man I've ever called a coward, and that's Brian Doyle Murray. No, what I'm calling you is a television actor. 
 
 Really? Did nothing cancel? Oh, you're gonna be in a coma, all right. Get me a vodka rocks. And a piece of toast. That's why you always leave a note!
 

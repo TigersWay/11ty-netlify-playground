@@ -1,4 +1,4 @@
 {
   "tags": ["coffee"],
-  "layout": "simple.njk"
+  "layout": "article.njk"
 }
